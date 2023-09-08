@@ -2,8 +2,20 @@ version: '3'
 services:
   web:
     image: php:8.2-apache
-    container_name: formation_php
+    container_name: php
     ports:
       - "80:80"
     volumes:
       - ./:/var/www/html
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app_database
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

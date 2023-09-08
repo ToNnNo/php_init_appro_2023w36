@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="uft-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Responsive Web Design</title>
+    <style>
+        /* code pour les plus petit support */
+
+        .text-color {
+            color: limegreen
+        }
+
+        @media (min-width: 768px) {
+            /* code pour les supports de minimum 768px */
+            .text-color {
+                color: purple
+            }
+
+            .container {
+                width: 750px;
+                margin: auto;
+            }
+        }
+
+        @media (min-width: 992px) {
+            /* code pour les supports de minimum 992px */
+
+            .container {
+                width: 980px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome</h1>
+
+    <p class="text-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, atque, aut delectus dicta
+        dolorem eveniet ipsa
+        magnam officiis quaerat ratione similique voluptatum. Ad aliquam, eligendi eos est qui soluta temporibus?</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+1 SGBD
+  |- 1 ou +ieurs Bdd
+    |- +ieurs Table (avec ou non des relations)
+      |- +ieurs Champs (structure des valeurs)
+        |- ieurs Valeur (valeur qu'on souhaite persister)
+
+Le langage pour manipuler les données est le SQL
+
+PHPMyAdmin -> interface graphique web pour visualiser et gérer une SGBD (type mariadb ou mysql)
+
+bdd Bibliothèque
+
+Livre
+  id - int (clé primaire) auto_increment
+  titre - varchar(50)
+  resume - text
+  date_parution - date
+
+Auteur
+  id
+  nom
+  prenom
+
+Requête SQL
+
+Extraction
+
+- SELECT fieldname, fieldname ou (*)
+  FROM tablename1
+  JOIN tablename2 ON tablename1.foreignKey = tablename2.primaryKey
+  WHERE fieldname = "value"
+    AND fieldname = "value"
+    OR fieldname = "value"
+  ORDER BY fieldname ASC/DESC
+  LIMIT qte (ex: LIMIT 0, 30 -> LIMIT 30, 60)
+  OFFSET lineNumber
+
+comparateur: = !=(<>) < > <= >= LIKE/ILIKE IN NOT BETWEEN
+
+Insertion
+
+- INSERT INTO tablename (fieldname, fieldname, ...) VALUE(S) ("newValue", "newValue", ...) [, ("newValue", "newValue", ...)]
+
+Modification
+
+- UPDATE tablename SET fieldname = "newValue" [, fieldname = "newValue"] WHERE conditions
+
+Suppression
+
+- DELETE FROM tablename WHERE conditions (ex fieldname = "value")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
